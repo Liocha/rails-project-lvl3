@@ -11,3 +11,2332 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 39ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 4707)
 
 
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (29.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (22.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220403002337)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar, "password" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220403002337"]]
+  [1m[36mTRANSACTION (22.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-04-03 00:23:47.603577"], ["updated_at", "2022-04-03 00:23:47.603577"]]
+  [1m[36mTRANSACTION (35.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["login", "alex"], ["password", "123456"], ["created_at", "2022-04-03 00:24:58.459214"], ["updated_at", "2022-04-03 00:24:58.459214"]]
+  [1m[36mTRANSACTION (20.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2022-04-03 03:41:31 +0300
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=54e3b0fb-1e02-4c8c-ac8f-ca0e5370335c (only available if report was successful)
+  
+AbstractController::ActionNotFound (The action 'homepage' could not be found for WelcomeController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.3.0) lib/rollbar.rb:145:in `scoped'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 03:41:33 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 03:42:20 +0300
+Processing by WelcomeController#homepage as HTML
+Completed 406 Not Acceptable in 15ms (Allocations: 3468)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=214f86ee-10b0-47a2-85f2-e578fcc45dd2 (only available if report was successful)
+  
+ActionController::MissingExactTemplate (WelcomeController#homepage is missing a template for request formats: text/html):
+  
+actionpack (6.1.5) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.1.5) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (6.1.5) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.5) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.5) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.5) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.5) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+actiontext (6.1.5) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.5) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.5) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.5) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.5) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.5) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.5) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.5) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.5) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.5) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.5) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.5) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.5) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:25:in `block in call'
+rollbar (3.3.0) lib/rollbar.rb:145:in `scoped'
+rollbar (3.3.0) lib/rollbar/middleware/rails/rollbar.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+rollbar (3.3.0) lib/rollbar/middleware/rails/show_exceptions.rb:22:in `call_with_rollbar'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 03:42:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 03:43:05 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 1.6ms | Allocations: 155)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/liocha/projects/rails-project-lvl3/public/packs
+[Webpacker] warning ../../package.json: No license field
+
+[Webpacker] Hash: 4949f615883aa45838a7
+Version: webpack 4.46.0
+Time: 1558ms
+Built at: 03.04.2022 03:43:08
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-19ade39cc333985062bf.js    125 KiB  application  [emitted] [immutable]  application
+js/application-19ade39cc333985062bf.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-19ade39cc333985062bf.js js/application-19ade39cc333985062bf.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 3329.1ms | Allocations: 22023)
+Completed 200 OK in 3334ms (Views: 3331.9ms | ActiveRecord: 0.0ms | Allocations: 23429)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 03:43:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 03:45:04 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.6ms | Allocations: 157)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3540)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 4880)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 03:45:06 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 03:45:19 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 2.6ms | Allocations: 157)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3541)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 4888)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 03:45:21 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 03:45:51 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.9ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 3540)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 4881)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-03 03:45:53 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3010)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 3502)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 03:45:53 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 03:45:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 03:45:56 +0300
+Processing by WelcomeController#homepage as */*
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3008)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 3603)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-03 03:46:06 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.4ms | Allocations: 159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3532)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 4855)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 03:46:08 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 03:49:03 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 1.7ms | Allocations: 767)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4132)
+Completed 200 OK in 15ms (Views: 13.9ms | Allocations: 5465)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 03:49:05 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 03:49:07 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.4ms | Allocations: 121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3091)
+Completed 200 OK in 10ms (Views: 9.7ms | Allocations: 3552)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-03 03:49:08 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.3ms | Allocations: 121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3082)
+Completed 200 OK in 9ms (Views: 8.3ms | Allocations: 3525)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-03 03:49:09 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.6ms | Allocations: 121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3083)
+Completed 200 OK in 7ms (Views: 6.3ms | Allocations: 3526)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-03 03:49:10 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.3ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3085)
+Completed 200 OK in 5ms (Views: 4.3ms | Allocations: 3529)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-03 03:51:20 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.5ms | Allocations: 256)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3621)
+Completed 200 OK in 11ms (Views: 10.3ms | Allocations: 4938)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 03:51:22 +0300
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1220)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1295)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.8ms | Allocations: 6975)
+
+
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=d46d518b-79f9-46f8-b2c2-5702f4d772a9 (only available if report was successful)
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Create new user</h1>
+
+
+<%= form_for @user do |f| %>
+<%= f.label :login %>
+<%= f.text_field :login, placeholder: 'Login' %>
+<%= f.label :password %>
+<%= f.text_field :password, placeholder: 'Password' %>
+<%= f.submit "Create Account" %>
+<%= end =>  
+):
+1:    <h1>Create new user</h1>
+2:    
+3:    
+4:    <%= form_for @user do |f| %>
+5:    <%= f.label :login %>
+6:    <%= f.text_field :login, placeholder: 'Login' %>
+7:    <%= f.label :password %>
+8:    <%= f.text_field :password, placeholder: 'Password' %>
+9:    <%= f.submit "Create Account" %>
+10:    <%= end =>  
+  
+app/views/users/new.html.erb:12: syntax error, unexpected end-of-input, expecting `end'
+app/views/users/new.html.erb:12: syntax error, unexpected end-of-input, expecting `end'
+app/views/users/new.html.erb:12: syntax error, unexpected end-of-input, expecting `end'
+app/views/users/new.html.erb:12: syntax error, unexpected end-of-input, expecting `end'
+app/views/users/new.html.erb:12: syntax error, unexpected end-of-input, expecting `end'
+app/views/users/new.html.erb:12: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 03:51:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 03:55:02 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 3681)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3755)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 5082)
+
+
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=ae9efb8c-bc4d-477f-9966-c64b4f8c1cd4 (only available if report was successful)
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x0000000000cbc0>
+Did you mean?  users_new_path):
+    1: <h1>Create new user</h1>
+    2: 
+    3: 
+    4: <%= form_with model: @user do |form| %>
+    5: <div>
+    6:   <%= form.label :login %><br>
+    7:   <%= form.text_field :title %>
+  
+app/views/users/new.html.erb:4
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 03:55:04 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 03:55:28 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3530)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3604)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 4921)
+
+
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=42ddb876-961b-44f9-87dd-999f8140b1c5 (only available if report was successful)
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x0000000000d3b8>
+Did you mean?  users_new_path):
+    1: <h1>Create new user</h1>
+    2: 
+    3: 
+    4: <%= form_with model: User do |form| %>
+    5: <div>
+    6:   <%= form.label :login %><br>
+    7:   <%= form.text_field :title %>
+  
+app/views/users/new.html.erb:4
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 03:55:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 03:56:38 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 21.5ms | Allocations: 7085)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 10351)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms | Allocations: 11713)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 03:56:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 03:57:27 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3532)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3606)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 4923)
+
+
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=d40ace80-58d6-4344-a109-23f6cbdcdca1 (only available if report was successful)
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x0000000000e178>
+Did you mean?  users_new_path):
+    1: <h1>Create new user</h1>
+    2: 
+    3: 
+    4: <%= form_for @user do |f| %>
+    5: Login: <%= f.text_field :login %><br />
+    6: Password : <%= f.text_field :password %><br />
+    7: <%= f.submit %>
+  
+app/views/users/new.html.erb:4
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 03:57:29 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 03:57:38 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 777)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 4116)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 5479)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 03:57:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started POST "/users/new" for 127.0.0.1 at 2022-04-03 03:57:49 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/users/new"):
+  
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 03:57:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 04:01:15 +0300
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1079)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 4392)
+Completed 200 OK in 20ms (Views: 7.4ms | ActiveRecord: 1.2ms | Allocations: 9690)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-03 04:01:16 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.5ms | Allocations: 252)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3446)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 4658)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:01:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 04:01:18 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 470)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3419)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 3912)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 04:01:51 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 747)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 4077)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 5413)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:01:52 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 04:02:20 +0300
+Processing by UsersController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 742)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 4081)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 5495)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-03 04:10:37 +0300
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=980d252c-1592-4c45-bbe9-00633018d683 (only available if report was successful)
+  
+SyntaxError (/home/liocha/projects/rails-project-lvl3/config/routes.rb:6: syntax error, unexpected ',', expecting =>
+...es :users, only: :new, :create, :show
+...                              ^
+):
+  
+config/routes.rb:6: syntax error, unexpected ',', expecting =>
+config/routes.rb:6: syntax error, unexpected ',', expecting =>
+config/routes.rb:6: syntax error, unexpected ',', expecting =>
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:10:39 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 04:11:02 +0300
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=c60b9e1e-c976-4f32-ba0d-e1a30ace0f58 (only available if report was successful)
+  
+SyntaxError (/home/liocha/projects/rails-project-lvl3/config/routes.rb:6: syntax error, unexpected ':', expecting `end'
+... resources :users, only: :new :create :show
+...                              ^
+/home/liocha/projects/rails-project-lvl3/config/routes.rb:8: syntax error, unexpected `end', expecting end-of-input):
+  
+config/routes.rb:6: syntax error, unexpected ':', expecting `end'
+config/routes.rb:8: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:6: syntax error, unexpected ':', expecting `end'
+config/routes.rb:8: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:6: syntax error, unexpected ':', expecting `end'
+config/routes.rb:8: syntax error, unexpected `end', expecting end-of-input
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:11:05 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 04:11:23 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.5ms | Allocations: 254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3593)
+Completed 200 OK in 11ms (Views: 10.3ms | Allocations: 5051)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:11:25 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 04:11:25 +0300
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1104)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 4263)
+Completed 200 OK in 22ms (Views: 6.4ms | ActiveRecord: 0.5ms | Allocations: 8914)
+
+
+Started POST "/users/new" for 127.0.0.1 at 2022-04-03 04:11:34 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/users/new"):
+  
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:11:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started POST "/users/new" for 127.0.0.1 at 2022-04-03 04:12:03 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/users/new"):
+  
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:12:05 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started POST "/users/new" for 127.0.0.1 at 2022-04-03 04:13:34 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/users/new"):
+  
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:13:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started POST "/users/new" for 127.0.0.1 at 2022-04-03 04:15:12 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/users/new"):
+  
+Started POST "/users/new" for 127.0.0.1 at 2022-04-03 04:15:13 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/users/new"):
+  
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:15:14 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 04:15:14 +0300
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 888)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 4184)
+Completed 200 OK in 29ms (Views: 13.0ms | ActiveRecord: 1.8ms | Allocations: 9474)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:15:15 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:15:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started POST "/users" for 127.0.0.1 at 2022-04-03 04:15:51 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"me", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (4.9ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["login", "me"], ["password", "1"], ["created_at", "2022-04-03 01:15:51.463818"], ["updated_at", "2022-04-03 01:15:51.463818"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (17.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/users/2
+Completed 302 Found in 40ms (ActiveRecord: 23.0ms | Allocations: 5476)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2022-04-03 04:15:51 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 162)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3228)
+Completed 200 OK in 22ms (Views: 5.5ms | ActiveRecord: 0.6ms | Allocations: 7520)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:15:53 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/" for 127.0.0.1 at 2022-04-03 04:16:06 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:16:08 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 04:16:10 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.5ms | Allocations: 252)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3446)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 4655)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:16:12 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 04:16:12 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 471)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3429)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 4522)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-04-03 04:16:21 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"meto", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["login", "meto"], ["password", "123456"], ["created_at", "2022-04-03 01:16:21.084385"], ["updated_at", "2022-04-03 01:16:21.084385"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (23.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/users/3
+Completed 302 Found in 32ms (ActiveRecord: 23.6ms | Allocations: 4658)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2022-04-03 04:16:21 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3000)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 4010)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:16:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 04:30:03 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.6ms | Allocations: 297)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 3636)
+Completed 200 OK in 20ms (Views: 18.6ms | Allocations: 5096)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:30:05 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 04:30:06 +0300
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 846)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 4008)
+Completed 200 OK in 20ms (Views: 7.3ms | ActiveRecord: 1.0ms | Allocations: 8660)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 04:30:40 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3383)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 3833)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:30:42 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started POST "/users" for 127.0.0.1 at 2022-04-03 04:31:04 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"lexa", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["login", "lexa"], ["password", "1"], ["created_at", "2022-04-03 01:31:04.191634"], ["updated_at", "2022-04-03 01:31:04.191634"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (19.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/users/4
+Completed 302 Found in 29ms (ActiveRecord: 19.9ms | Allocations: 4808)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2022-04-03 04:31:04 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3090)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 4474)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:31:06 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 04:31:10 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.3ms | Allocations: 88)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3057)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 3502)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:31:12 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/sessions/new" for 127.0.0.1 at 2022-04-03 04:31:14 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1511)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1619)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 3425)
+
+
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=915bed24-dab1-43cf-a264-30eb589185e3 (only available if report was successful)
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]
+Did you mean?  session_url
+               sessions_url
+               sessions_path
+               new_session_url):
+    1: <h1>Sessions#new</h1>
+    2: <%= form_tag session_path do |f| %>
+    3: Login: <%= f.text_field :login %><br />
+    4: Password : <%= f.text_field :password %><br />
+    5: <%= f.submit "Sessions#start" %>
+  
+app/views/sessions/new.html.erb:2
+Started GET "/sessions/new" for 127.0.0.1 at 2022-04-03 04:32:20 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1723)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1797)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3131)
+
+
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=fc0863fd-da5d-4604-b2ae-d19416a98471 (only available if report was successful)
+  
+ActionView::Template::Error (undefined method `text_field' for nil:NilClass):
+    1: <h1>Sessions#new</h1>
+    2: <%= form_tag sessions_path do |f| %>
+    3: Login: <%= f.text_field :login %><br />
+    4: Password : <%= f.text_field :password %><br />
+    5: <%= f.submit "Sessions#start" %>
+    6: <% end %>
+  
+app/views/sessions/new.html.erb:3
+app/views/sessions/new.html.erb:2
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:32:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/sessions/new" for 127.0.0.1 at 2022-04-03 04:36:20 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1217)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1292)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2586)
+
+
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=119c8d3e-469f-4e98-a20a-69f6ce0c6c98 (only available if report was successful)
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Sessions#new</h1>
+<%= form_tag sessions_path %>
+Login: <%= text_tag :login %><br />
+Password : <%= text_tag :password %><br />
+<%= submit_tag "Sessions#start" %>
+<% end %>
+):
+1:    <h1>Sessions#new</h1>
+2:    <%= form_tag sessions_path %>
+3:    Login: <%= text_tag :login %><br />
+4:    Password : <%= text_tag :password %><br />
+5:    <%= submit_tag "Sessions#start" %>
+6:    <% end %>
+  
+app/views/sessions/new.html.erb:8: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:8: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:8: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:8: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:8: syntax error, unexpected `end', expecting end-of-input
+app/views/sessions/new.html.erb:8: syntax error, unexpected `end', expecting end-of-input
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:36:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/sessions/new" for 127.0.0.1 at 2022-04-03 04:38:33 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 477)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3816)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 5155)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:38:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started POST "/sessions" for 127.0.0.1 at 2022-04-03 04:39:12 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"alex", "password"=>"[FILTERED]", "commit"=>"Sessions#start"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "alex"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/sessions/new
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 1149)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2022-04-03 04:39:12 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 214)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3172)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 3630)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:39:14 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 04:39:20 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.7ms | Allocations: 285)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3479)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 4557)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 04:39:21 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 759)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3918)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 5081)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:39:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started POST "/users" for 127.0.0.1 at 2022-04-03 04:39:28 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"aaa", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["login", "aaa"], ["password", "1"], ["created_at", "2022-04-03 01:39:28.111312"], ["updated_at", "2022-04-03 01:39:28.111312"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (30.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/users/5
+Completed 302 Found in 43ms (ActiveRecord: 31.0ms | Allocations: 4669)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2022-04-03 04:39:28 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3089)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms | Allocations: 4240)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:39:29 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 04:39:31 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.2ms | Allocations: 88)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3058)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 3503)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:39:33 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/sessions/new" for 127.0.0.1 at 2022-04-03 04:39:40 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 214)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3771)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 4219)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2022-04-03 04:39:44 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"aaa", "password"=>"[FILTERED]", "commit"=>"Sessions#start"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "aaa"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/create.html.erb within layouts/application
+  Rendered sessions/create.html.erb within layouts/application (Duration: 1.8ms | Allocations: 107)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3082)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 4262)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:39:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 04:40:02 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.2ms | Allocations: 88)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3058)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 3502)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:40:04 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 04:40:06 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 415)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3373)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 3835)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-04-03 04:40:09 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"qqqq", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["login", "qqqq"], ["password", "qqq"], ["created_at", "2022-04-03 01:40:09.807427"], ["updated_at", "2022-04-03 01:40:09.807427"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (26.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/users/6
+Completed 302 Found in 41ms (ActiveRecord: 27.8ms | Allocations: 4448)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2022-04-03 04:40:09 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3000)
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 3994)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:40:11 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/7" for 127.0.0.1 at 2022-04-03 04:40:13 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1147)
+
+
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=e5a2fc22-4ca6-48d9-9501-e20c46fc1610 (only available if report was successful)
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=7):
+  
+app/controllers/users_controller.rb:17:in `show'
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:40:15 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/4" for 127.0.0.1 at 2022-04-03 04:40:17 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3009)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 4003)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:40:19 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/7" for 127.0.0.1 at 2022-04-03 04:44:10 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.8ms | Allocations: 3395)
+
+
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=8398972b-4b62-45ef-b80e-eacaf2f25e60 (only available if report was successful)
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=7):
+  
+app/controllers/users_controller.rb:17:in `show'
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:44:12 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 04:44:13 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.9ms | Allocations: 153)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3347)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 4124)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:44:14 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 04:44:15 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 657)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3795)
+Completed 200 OK in 22ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 7255)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-04-03 04:44:21 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"qqq", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["login", "qqq"], ["password", "qqq"], ["created_at", "2022-04-03 01:44:21.401723"], ["updated_at", "2022-04-03 01:44:21.401723"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (26.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/users/7
+Completed 302 Found in 44ms (ActiveRecord: 27.5ms | Allocations: 4259)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2022-04-03 04:44:21 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 42)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3003)
+Completed 200 OK in 15ms (Views: 9.4ms | ActiveRecord: 0.3ms | Allocations: 4040)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:44:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 04:44:24 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.2ms | Allocations: 88)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3054)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 3499)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2022-04-03 04:44:26 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 315)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3474)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 4253)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:44:26 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started POST "/sessions" for 127.0.0.1 at 2022-04-03 04:44:29 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"qqq", "password"=>"[FILTERED]", "commit"=>"Sessions#start"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "qqq"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/sessions/new
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 1163)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2022-04-03 04:44:29 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 214)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3163)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 3621)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:44:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started POST "/sessions" for 127.0.0.1 at 2022-04-03 04:44:34 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"qqq", "password"=>"[FILTERED]", "commit"=>"Sessions#start"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "qqq"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/users/7
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms | Allocations: 860)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2022-04-03 04:44:34 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3009)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 4007)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:44:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/sessions/new" for 127.0.0.1 at 2022-04-03 04:44:59 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 316)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3458)
+Completed 200 OK in 11ms (Views: 9.9ms | Allocations: 4233)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:45:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started POST "/sessions" for 127.0.0.1 at 2022-04-03 04:45:02 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"qqq", "password"=>"[FILTERED]", "commit"=>"Sessions#start"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "qqq"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/users/7
+Completed 302 Found in 20ms (ActiveRecord: 2.1ms | Allocations: 5139)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2022-04-03 04:45:02 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 63)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3270)
+Completed 200 OK in 26ms (Views: 17.2ms | ActiveRecord: 0.5ms | Allocations: 4865)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:45:04 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/7" for 127.0.0.1 at 2022-04-03 04:45:43 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 64)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 3245)
+Completed 200 OK in 36ms (Views: 17.9ms | ActiveRecord: 1.7ms | Allocations: 8657)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:45:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 04:45:45 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.3ms | Allocations: 153)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 50.5ms | Allocations: 17034)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.0ms | Allocations: 17825)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2022-04-03 04:45:46 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 20.6ms | Allocations: 307)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 3472)
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 0.0ms | Allocations: 5059)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:45:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started POST "/sessions" for 127.0.0.1 at 2022-04-03 04:45:52 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"qqq", "password"=>"[FILTERED]", "commit"=>"Sessions#start"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "qqq"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/users/7
+Completed 302 Found in 11ms (ActiveRecord: 0.5ms | Allocations: 1229)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2022-04-03 04:45:52 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 3009)
+Completed 200 OK in 33ms (Views: 20.2ms | ActiveRecord: 0.2ms | Allocations: 4023)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 04:45:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:47:33 +0300
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 6.5ms | Allocations: 673)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 79.1ms | Allocations: 7393)
+Completed 200 OK in 108ms (Views: 89.0ms | ActiveRecord: 0.0ms | Allocations: 11054)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:47:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 06:47:37 +0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 11.6ms | Allocations: 2851)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 5990)
+Completed 200 OK in 34ms (Views: 26.1ms | ActiveRecord: 0.4ms | Allocations: 10881)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-04-03 06:47:43 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"z", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (8.0ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["login", "z"], ["password", "z"], ["created_at", "2022-04-03 03:47:43.027848"], ["updated_at", "2022-04-03 03:47:43.027848"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (18.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/users/8
+Completed 302 Found in 44ms (ActiveRecord: 26.9ms | Allocations: 5613)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2022-04-03 06:47:43 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 166)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 3561)
+Completed 200 OK in 28ms (Views: 17.2ms | ActiveRecord: 0.6ms | Allocations: 5679)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:47:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:47:46 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.2ms | Allocations: 96)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3059)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 3511)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:47:46 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.3ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3053)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 3499)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2022-04-03 06:47:48 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 484)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3652)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 4860)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:47:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started POST "/sessions" for 127.0.0.1 at 2022-04-03 06:47:52 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"z", "password"=>"[FILTERED]", "commit"=>"Sessions#start"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "z"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://127.0.0.1:3000/users/8
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 1294)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2022-04-03 06:47:52 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3012)
+Completed 200 OK in 20ms (Views: 13.0ms | ActiveRecord: 0.5ms | Allocations: 4030)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:47:53 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:47:56 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.2ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3067)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 3516)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:47:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:49:14 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.9ms | Allocations: 160)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3332)
+Completed 200 OK in 13ms (Views: 11.3ms | Allocations: 4158)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:49:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:49:28 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.3ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3067)
+Completed 200 OK in 6ms (Views: 5.3ms | Allocations: 3573)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:49:29 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/sessions/new" for 127.0.0.1 at 2022-04-03 06:49:35 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 300)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 3452)
+Completed 200 OK in 35ms (Views: 27.0ms | Allocations: 5037)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2022-04-03 06:49:42 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"qq", "password"=>"[FILTERED]", "commit"=>"Sessions#start"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "qq"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://127.0.0.1:3000/sessions/new
+Completed 302 Found in 14ms (ActiveRecord: 1.6ms | Allocations: 3040)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2022-04-03 06:49:42 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 245)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 3316)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 3841)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:49:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started POST "/sessions" for 127.0.0.1 at 2022-04-03 06:49:47 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"z", "password"=>"[FILTERED]", "commit"=>"Sessions#start"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "z"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://127.0.0.1:3000/users/8
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms | Allocations: 2975)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2022-04-03 06:49:47 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 63)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 3232)
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.2ms | Allocations: 4830)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:49:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:49:55 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.3ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3361)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 4183)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:49:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:50:03 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.4ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3067)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 3571)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:50:04 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/7" for 127.0.0.1 at 2022-04-03 06:52:22 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 64)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 3299)
+Completed 200 OK in 53ms (Views: 26.8ms | ActiveRecord: 1.9ms | Allocations: 8852)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:52:24 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:52:24 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.9ms | Allocations: 160)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3358)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 4178)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:52:26 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:52:30 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 1.0ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3067)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 3571)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:52:31 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.3ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3067)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 3536)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:52:32 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.3ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3053)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 3521)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:52:32 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:52:32 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.3ms | Allocations: 93)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3068)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 3537)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:52:33 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.8ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3062)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 3531)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:52:33 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.5ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 3058)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 3526)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:52:33 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 1.1ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 3053)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 3521)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:52:33 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.4ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 3053)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 3521)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:52:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:53:01 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.2ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3067)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 3536)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:53:03 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/users/new" for 127.0.0.1 at 2022-04-03 06:53:03 +0300
+Processing by UsersController#new as HTML
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 658)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3810)
+Completed 200 OK in 24ms (Views: 10.8ms | ActiveRecord: 3.5ms | Allocations: 9236)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-04-03 06:53:08 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"login"=>"v", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["login", "v"], ["password", "v"], ["created_at", "2022-04-03 03:53:08.547793"], ["updated_at", "2022-04-03 03:53:08.547793"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (37.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://127.0.0.1:3000/users/9
+Completed 302 Found in 62ms (ActiveRecord: 38.1ms | Allocations: 4879)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2022-04-03 06:53:08 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 42)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 3326)
+Completed 200 OK in 25ms (Views: 16.4ms | ActiveRecord: 0.6ms | Allocations: 4600)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:53:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:53:12 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.3ms | Allocations: 159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3357)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 4182)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:53:12 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.2ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3053)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 3592)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:53:14 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/sessions/new" for 127.0.0.1 at 2022-04-03 06:53:16 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 315)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 4270)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 5052)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2022-04-03 06:53:21 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "login"=>"v", "password"=>"[FILTERED]", "commit"=>"Sessions#start"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "v"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://127.0.0.1:3000/users/9
+Completed 302 Found in 10ms (ActiveRecord: 0.6ms | Allocations: 1214)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2022-04-03 06:53:21 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 3015)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 0.1ms | Allocations: 4031)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:53:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:53:26 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1099)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1167)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1636)
+
+
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=f63ede0b-3bd7-4c31-8c22-a4ca9fab39da (only available if report was successful)
+  
+ActionView::Template::Error (Unsupported argument type: 9 (Integer)):
+    11: <body>
+    12:   <div
+    13:     style="width: 100%; height: 30px; display: flex; justify-content: space-between;max-width: 1200px;margin: 20px auto;">
+    14:     <% if current_user %>
+    15:     <div><%= @user.login %></div>
+    16:     <div> <%= link_to "Sign out", session_path, method: 'delete' %></div>
+    17:   </div>
+  
+app/controllers/application_controller.rb:5:in `current_user'
+app/controllers/application_controller.rb:3:in `current_user'
+app/views/welcome/homepage.html.erb:14
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:53:28 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:56:15 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 15.6ms | Allocations: 6331)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 6408)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.6ms | Allocations: 7184)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=51b5d2ff-8cbd-45f7-a418-d1d22e87c90c (only available if report was successful)
+  
+ActionView::Template::Error (undefined method `login' for nil:NilClass):
+    12:   <div
+    13:     style="width: 100%; height: 30px; display: flex; justify-content: space-between;max-width: 1200px;margin: 20px auto;">
+    14:     <% if current_user %>
+    15:     <div><%= @user.login %></div>
+    16:     <div> <%= link_to "Sign out", session_path, method: 'delete' %></div>
+    17:   </div>
+    18:   <% else %>
+  
+app/views/welcome/homepage.html.erb:15
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:56:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:57:24 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2072)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 2140)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms | Allocations: 2609)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=c1f42e0e-fe83-45fb-8c8e-faa5e26cd84e (only available if report was successful)
+  
+ActionView::Template::Error (undefined method `login' for nil:NilClass):
+    12:   <div
+    13:     style="width: 100%; height: 30px; display: flex; justify-content: space-between;max-width: 1200px;margin: 20px auto;">
+    14:     <% if current_user %>
+    15:     <div><%= @user.login %></div>
+    16:     <div> <%= link_to "Sign out", session_path, method: 'delete' %></div>
+    17:   </div>
+    18:   <% else %>
+  
+app/views/welcome/homepage.html.erb:15
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:57:26 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:58:44 +0300
+Processing by WelcomeController#homepage as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/welcome_controller.rb:4:in `homepage'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:4:in `homepage'
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1953)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2027)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.7ms | Allocations: 7460)
+
+
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=28f12f18-e61b-43dc-b687-3b832482ed30 (only available if report was successful)
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]
+Did you mean?  session_url
+               sessions_url
+               sessions_path
+               new_session_url):
+    13:     style="width: 100%; height: 30px; display: flex; justify-content: space-between;max-width: 1200px;margin: 20px auto;">
+    14:     <% if current_user %>
+    15:     <div><%= @user.login %></div>
+    16:     <div> <%= link_to "Sign out", session_path, method: 'delete' %></div>
+    17:   </div>
+    18:   <% else %>
+    19:   <div> <%= link_to "Create User", new_user_path %></div>
+  
+app/views/welcome/homepage.html.erb:16
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:58:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:58:59 +0300
+Processing by WelcomeController#homepage as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:4:in `homepage'
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1775)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1843)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms | Allocations: 2867)
+
+
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=9906613a-0e41-405f-99b0-68a819b70e13 (only available if report was successful)
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]
+Did you mean?  session_url
+               sessions_url
+               sessions_path
+               new_session_url):
+    13:     style="width: 100%; height: 30px; display: flex; justify-content: space-between;max-width: 1200px;margin: 20px auto;">
+    14:     <% if current_user %>
+    15:     <div><%= @user.login %></div>
+    16:     <div> <%= link_to "Sign out", session_path, method: 'delete' %></div>
+    17:   </div>
+    18:   <% else %>
+    19:   <div> <%= link_to "Create User", new_user_path %></div>
+  
+app/views/welcome/homepage.html.erb:16
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:59:01 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 11.5ms | Allocations: 6309)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 6386)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.7ms | Allocations: 7159)
+
+
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=175fc916-67fb-4609-a342-3ca852c87006 (only available if report was successful)
+  
+ActionView::Template::Error (undefined method `login' for nil:NilClass):
+    12:   <div
+    13:     style="width: 100%; height: 30px; display: flex; justify-content: space-between;max-width: 1200px;margin: 20px auto;">
+    14:     <% if current_user %>
+    15:     <div><%= @user.login %></div>
+    16:     <div> <%= link_to "Sign out", session_path, method: 'delete' %></div>
+    17:   </div>
+    18:   <% else %>
+  
+app/views/welcome/homepage.html.erb:15
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:59:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 06:59:03 +0300
+Processing by WelcomeController#homepage as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2071)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2139)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2608)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `current_user'
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:59:03 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=088389e1-ced0-4563-881d-d6dc5ebe8704 (only available if report was successful)
+  
+ActionView::Template::Error (undefined method `login' for nil:NilClass):
+    12:   <div
+    13:     style="width: 100%; height: 30px; display: flex; justify-content: space-between;max-width: 1200px;margin: 20px auto;">
+    14:     <% if current_user %>
+    15:     <div><%= @user.login %></div>
+    16:     <div> <%= link_to "Sign out", session_path, method: 'delete' %></div>
+    17:   </div>
+    18:   <% else %>
+  
+app/views/welcome/homepage.html.erb:15
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 06:59:06 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 07:00:18 +0300
+Processing by WelcomeController#homepage as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/welcome_controller.rb:4:in `homepage'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:4:in `homepage'
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1891)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1965)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.2ms | Allocations: 7396)
+
+
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+[Rollbar] Scheduling item
+[Rollbar] Sending item
+[Rollbar] Sending json
+[Rollbar] Success
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=a9261dae-4ca8-4918-a63a-6c44393ac4d9 (only available if report was successful)
+  
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"sessions"}, missing required keys: [:id]
+Did you mean?  session_url
+               sessions_url
+               sessions_path
+               new_session_url):
+    13:     style="width: 100%; height: 30px; display: flex; justify-content: space-between;max-width: 1200px;margin: 20px auto;">
+    14:     <% if current_user %>
+    15:     <div><%= @user.login %></div>
+    16:     <div> <%= link_to "Sign out", session_path, method: 'delete' %></div>
+    17:   </div>
+    18:   <% else %>
+    19:   <div> <%= link_to "Create User", new_user_path %></div>
+  
+app/views/welcome/homepage.html.erb:16
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 07:00:20 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 07:00:52 +0300
+Processing by WelcomeController#homepage as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:4:in `homepage'
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1034)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4402)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 0.1ms | Allocations: 6337)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 07:00:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started DELETE "/sessions" for 127.0.0.1 at 2022-04-03 07:00:59 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/sessions"):
+  
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 07:01:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-03 07:01:40 +0300
+Processing by WelcomeController#homepage as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/welcome_controller.rb:4:in `homepage'
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/homepage.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `current_user'
+  Rendered welcome/homepage.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1030)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4398)
+Completed 200 OK in 22ms (Views: 14.9ms | ActiveRecord: 0.7ms | Allocations: 6315)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2022-04-03 07:01:42 +0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."login" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Redirected to http://127.0.0.1:3000/sessions/new
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1304)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2022-04-03 07:01:42 +0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 474)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3634)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 4771)
+
+
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 07:01:42 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  
+Started GET "/push_sw.js" for 127.0.0.1 at 2022-04-03 07:01:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/push_sw.js"):
+  

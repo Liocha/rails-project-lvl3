@@ -61,3 +61,5 @@ gem 'rollbar'
 group :production do
   gem 'pg'
 end
+
+gem 'rubocop-rails', require: false

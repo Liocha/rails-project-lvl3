@@ -1,0 +1,23 @@
+require: rubocop-rails
+
+AllCops:
+  NewCops: enable
+
+Rails/FindBy:
+  Exclude:
+    - lib/example.rb
+
+Layout/LineLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false

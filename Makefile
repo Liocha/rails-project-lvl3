@@ -18,3 +18,6 @@ cs:
 
 rs:
 	bin/setup
+
+env:
+	cp .env.example .env

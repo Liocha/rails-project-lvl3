@@ -1,0 +1,19 @@
+.container
+  nav.navbar.navbar-expand-lg.navbar-light style=("background-color: #e3f2fd;") 
+    .container-fluid
+      = link_to t('.brand_name'), root_path, class: 'navbar-brand'
+      button.navbar-toggler aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label=("Toggle navigation") data-bs-target="#navbarNavAltMarkup" data-bs-toggle="collapse" type="button" 
+        span.navbar-toggler-icon
+      #navbarNavAltMarkup.collapse.navbar-collapse
+        .navbar-nav
+          = link_to t('.home_index'), root_path, class: 'nav-link active'
+      ul.nav.nav-pills
+        li.nav-item.me-2.d-flex.align-items-center
+          - if current_user
+            span = current_user.name
+            = link_to sign_out_path, :method => 'delete', class: 'nav-link text-dark' do
+              span.bi.bi-box-arrow-left data-bs-toggle="tooltip" data-bs-placement="top" title= t('.sign_out')
+          - else
+            = link_to auth_request_path('github'), :method => 'post', class: 'nav-link text-dark' do
+              span.bi.bi-github.me-2
+              = t('.sign_in')

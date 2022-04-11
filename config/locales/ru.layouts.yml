@@ -1,0 +1,21 @@
+ru:
+  layouts:
+    web:
+      admin:
+        application:
+          dashboard: Кабинет
+          languages: Языки
+    shared:
+      nav:
+        brand_name: Доска объявлений
+        home_index: Главная
+        community: Сообщество
+        sign_in: Вход
+        sign_out: Выйти
+        registration: Регистрация
+        success_stories: Истории успеха
+        profile: Настройки
+        change_course: Выберите курс
+        toggle_navigation: Переключить навигацию
+        toggle_user_menu: Показать/скрыть меню пользователя
+        admin: Админство

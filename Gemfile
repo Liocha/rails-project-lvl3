@@ -68,7 +68,8 @@ end
 
 gem 'rubocop-rails', require: false
 
+gem 'bootstrap_form', '~> 5.0'
 gem 'faker'
 gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection'
-gem 'slim-rails'
+gem 'slim-rails', '~> 3.3.0'

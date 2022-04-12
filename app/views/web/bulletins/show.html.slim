@@ -1,0 +1,25 @@
+p#notice = notice
+
+p
+  strong Category:
+  = @bulletin.category
+
+p
+  strong Creator:
+  = @bulletin.creator
+
+p
+  strong Title:
+  = @bulletin.title
+
+p
+  strong Description:
+  = @bulletin.description
+
+p
+  strong Image:
+  = @bulletin.image
+
+=> link_to 'Edit', edit_bulletin_path(@bulletin)
+'|
+=< link_to 'Back', bulletins_path

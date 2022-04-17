@@ -19,8 +19,7 @@ class Web::BulletinsController < ApplicationController
 
   # POST /bulletins or /bulletins.json
   def create
-    @bulletin = Bulletin.new(bulletin_params)
-
+    @bulletin = current_user.bulletins.build(bulletin_params)
     respond_to do |format|
       if @bulletin.save
         format.html { redirect_to bulletin_url(@bulletin), notice: 'Bulletin was successfully created.' }

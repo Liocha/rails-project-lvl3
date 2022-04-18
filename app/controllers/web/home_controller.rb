@@ -1,3 +1,5 @@
 class Web::HomeController < ApplicationController
-  def index; end
+  def index
+    @bulletins = Bulletin.all
+  end
 end

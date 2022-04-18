@@ -1,2 +1,13 @@
-.container 
-  | Test data
+.album.py-5.bg-light
+  .container
+    .row.row-cols-1.row-cols-sm-2.row-cols-md-3.g-3.mt-3
+      - for bulletin in @bulletins
+            .col
+              .card.shadow-sm
+                = image_tag bulletin.image
+                .card-body
+                  p.card-text
+                    = bulletin.title
+                  .d-flex.justify-content-between.align-items-center
+                    .btn-group
+                      = link_to "View", bulletin_path(bulletin), class: 'btn btn-sm btn-outline-secondary'

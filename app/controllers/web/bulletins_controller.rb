@@ -19,15 +19,12 @@ class Web::BulletinsController < ApplicationController
 
   # POST /bulletins or /bulletins.json
   def create
+    pp bulletin_params
     @bulletin = current_user.bulletins.build(bulletin_params)
-    respond_to do |format|
-      if @bulletin.save
-        format.html { redirect_to bulletin_url(@bulletin), notice: 'Bulletin was successfully created.' }
-        format.json { render :show, status: :created, location: @bulletin }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @bulletin.errors, status: :unprocessable_entity }
-      end
+    if @bulletin.save
+      redirect_to bulletin_url(@bulletin), notice: 'Bulletin was successfully created.'
+    else
+      render :new, status: :unprocessable_entity
     end
   end
 

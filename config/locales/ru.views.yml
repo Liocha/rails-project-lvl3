@@ -1,0 +1,68 @@
+ru:
+  web:
+    admin:
+      title: Админка Code-Basics
+      languages:
+        index:
+          languages: Языки
+          add_new_language: Добавить новый язык
+    home:
+      reviews:
+        reviews: Отзывы
+      hero:
+        learn_html: Изучи&nbsp;
+        free_programming_courses: Бесплатные курсы программирования
+        fastest_way_to_start_coding: Самый быстрый способ попробовать программирование прямо в браузере. Бесплатные курсы с тренажером. Практика после каждого урока
+        try: Попробовать
+        how_coding_works: Как работает обучение на code-basics
+      languages:
+        course_finished: Курс пройден!
+        ready_to_start: Начать
+        started: Продолжить
+        finished: Повторить
+        courses: Курсы
+      stats:
+        trusted_by: |
+          Присоединись к %{count} изующих программирование с помощью Code Basics
+      index:
+        meta_description: Бесплатные практические курсы программирования для начинающих от сообщества Хекслет. Обучение языкам программирования с нуля бесплатно, интерактивные уроки онлайн на русском
+        title: |
+          Code Basics: бесплатные курсы программирования, обучение онлайн
+        header: Обучение программированию. Онлайн. Бесплатно
+        subheader: 'Для тех, кто начинает с нуля. От создателей '
+        hexlet: Хекслета
+        in_development: Курсы в разработке
+        in_development_description: Данные курсы находятся в разработке и не являются финальной версией. Вы можете помочь в разработке, прислав Pull Request в репозиторий GitHub
+    users:
+      new:
+        title: Регистрация
+        meta_description: Зарегистрироваться на Code Basics
+        sign_up: Регистрация
+        have_account: Есть аккаунт?
+        sign_in: Войти
+    sessions:
+      new:
+        title: Вход
+        meta_description: Войти на Code Basics
+        sign_in: Вход
+        dont_have_account: Нет аккаунта?
+        register: Регистрация
+        sign_in_with_github: Войти через GitHub
+        forgot_password: Забыли пароль?
+        password: Пароль
+        email: Email
+    passwords:
+      edit:
+        meta_description: Установить новый пароль на Code Basics
+        new_password: Новый пароль
+        title: Смена пароля
+    remind_passwords:
+      new:
+        title: Восстановление пароля
+        meta_description: Восстановить пароль на Code Basics
+        forgot_password: Забыли пароль
+        trying_to_login: Пытаетесь войти?
+        login: Войти
+        dont_have_account: Нет аккаунта?
+        register: Регистрация
+    languages:

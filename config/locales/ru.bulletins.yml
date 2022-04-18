@@ -1,0 +1,21 @@
+ru:
+  web:
+    bulletins:
+      edit:
+        title: Редактировать объявление
+      index:
+        category: Категория
+        creator: Создатель
+        description: Описание
+        new_bulletin: Добавить объявление
+        image: Изображение
+        title: Заголовок
+      new:
+        title: Добавление объявление
+      show:
+        category: Категория
+        creator: Создатель
+        description: Описание
+        new_bulletin: Добавить объявление
+        image: Изображение
+        title: Заголовок

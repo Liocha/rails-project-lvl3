@@ -3,12 +3,11 @@ h1 Listing bulletins
 table
   thead
     tr
-      th Category
-      th Creator
-      th Title
-      th Description
-      th Image
-      th
+      th = t('.сategory')
+      th = t('.creator')
+      th = t('.title')
+      th = t('.description')
+      th = t('.image')
       th
       th
 
@@ -19,10 +18,10 @@ table
         td = bulletin.creator
         td = bulletin.title
         td = bulletin.description
-        td = bulletin.image
-        td = link_to 'Show', bulletin
-        td = link_to 'Edit', edit_bulletin_path(bulletin)
-        td = link_to 'Destroy', bulletin, data: { confirm: 'Are you sure?' }, method: :delete
+        td = image_tag bulletin.image, class: 'img-thumbnail'
+        td = link_to t('show'), bulletin
+        td = link_to t('edit'), edit_bulletin_path(bulletin)
+        td = link_to t('destroy'), bulletin, data: { confirm: 'Are you sure?' }, method: :delete
 
 br
 

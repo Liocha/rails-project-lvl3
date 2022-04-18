@@ -10,8 +10,8 @@ class Web::AuthController < ApplicationController
     end
 
     session[:user_id] = @user.id
-    redirect_to root_path
-    # redirect_to root_path, flash: { success: 'Вы успешно вошли!' }
+    # redirect_to root_path
+    redirect_to root_path, flash: { success: 'Вы успешно вошли!' }
   end
 
   def sign_out
